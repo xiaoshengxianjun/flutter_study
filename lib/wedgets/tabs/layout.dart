@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class UserPage extends StatefulWidget {
+class LayoutPage extends StatefulWidget {
   @override
-  _UserPageState createState() => _UserPageState();
+  _LayoutPageState createState() => _LayoutPageState();
 }
 
-class _UserPageState extends State<UserPage> with SingleTickerProviderStateMixin {
+class _LayoutPageState extends State<LayoutPage> with SingleTickerProviderStateMixin {
   AnimationController _controller;
 
   @override

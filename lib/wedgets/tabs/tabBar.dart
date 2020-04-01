@@ -42,6 +42,26 @@ class _TabBarPageState extends State<TabBarPage> with SingleTickerProviderStateM
             tabs: tabs.map((e) => Tab(text:e)).toList() // 箭头函数，遍历tabs列表，生成Tab组件 Tab有text,icon和child三个属性
         ),
       ),
+      // 下面这种方法可以实现TabBar置顶，页面顶部没有标题的效果
+//      appBar: AppBar(
+//        flexibleSpace: SafeArea(
+//            child: Column(
+//              children: <Widget>[
+//                Expanded(child: SizedBox()), // 加上此组件是为了让TabBar贴近下边沿，否则TabBar指示器与下边沿只见会有间隙
+//                TabBar(
+//                    indicatorSize: TabBarIndicatorSize.label, // 指示器即下划线宽度计算方式，两个选项tab（默认，跟tab等宽）label（跟文本等宽）
+//                    indicatorWeight: 3, // 指示器的高度，默认为2
+//                    indicatorColor: Colors.black,
+//                    // labelColor: Colors.red, // 标签颜色，如果不设置未选中状态标签颜色，默认全部标签都是此颜色
+//                    unselectedLabelColor: Colors.black, // 未选中状态下的标签颜色
+//                    // isScrollable: true, // 是否可以滚动，默认false，当选项较多时可以选择此项设为true
+//                    controller: _tabController, // 必须要有个controller监控Tab菜单切换
+//                    tabs: tabs.map((e) => Tab(text:e)).toList() // 箭头函数，遍历tabs列表，生成Tab组件 Tab有text,icon和child三个属性
+//                ),
+//              ],
+//            )
+//        ),
+//      ),
       body: TabBarView(
         controller: _tabController, // 必须要有个controller，而且和TabBar中的controller是同一个
         children: tabs.map((e){

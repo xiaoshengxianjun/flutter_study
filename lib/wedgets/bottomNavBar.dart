@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'tabs/home.dart';
 import 'tabs/tabBar.dart';
-import 'tabs/user.dart';
+import 'tabs/layout.dart';
 
 class BottomNavBarPage extends StatefulWidget {
   @override
@@ -15,7 +15,7 @@ class _BottomNavBarPageState extends State<BottomNavBarPage> with SingleTickerPr
   List _pageList = [
     new HomePage(),
     new TabBarPage(),
-    new UserPage()
+    new LayoutPage()
   ]; // bottomNavigationBar对应的页面
 
   @override
@@ -29,8 +29,8 @@ class _BottomNavBarPageState extends State<BottomNavBarPage> with SingleTickerPr
       bottomNavigationBar: BottomNavigationBar(
           items: <BottomNavigationBarItem>[
             BottomNavigationBarItem(icon: Icon(Icons.home),title: Text("首页")),
-            BottomNavigationBarItem(icon: Icon(Icons.category),title: Text("分类")),
-            BottomNavigationBarItem(icon: Icon(Icons.person),title: Text("我的")),
+            BottomNavigationBarItem(icon: Icon(Icons.list),title: Text("分类")),
+            BottomNavigationBarItem(icon: Icon(Icons.category),title: Text("布局")),
           ],
           currentIndex: _selectIndex, // 当前哪一项被激活
           fixedColor: Colors.blue,
