@@ -4,10 +4,9 @@ import 'package:flutter_swiper/flutter_swiper.dart';
 class HomePage extends StatelessWidget {
 
   List _swiperList = [
-    "https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2715144986,4235468516&fm=26&gp=0.jpg",
-    "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1585740312062&di=1912635b3d8bdb3a04183fc0dd5a7f12&imgtype=0&src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20190111%2F259b252bc71c445cbe2d4e60800408a9.png",
-    "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1585740384531&di=066c06311c9ace90e18dd167b31a0099&imgtype=0&src=http%3A%2F%2Fimg.lixiaomeng.net%2Fxkbb%2F1e64a34a86a5123aebaab73c255b2f6a.jpg",
-    "https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3442485252,3832173426&fm=26&gp=0.jpg"
+    "https://fuss10.elemecdn.com/a/3f/3302e58f9a181d2509f3dc0fa68b0jpeg.jpeg",
+    "https://fuss10.elemecdn.com/0/6f/e35ff375812e6b0020b6b4e8f9583jpeg.jpeg",
+    "https://fuss10.elemecdn.com/d/e6/c4d93a3805b3ce3f323f7974e6f78jpeg.jpeg"
   ]; // 定义轮播图列表
 
   @override
@@ -50,7 +49,7 @@ class HomePage extends StatelessWidget {
         ),
       ),
       body: Container(
-          height: 140.0,
+          height: 200.0,
           child: Swiper(
               itemBuilder: (BuildContext context, int index){
                 return new Image.network(
