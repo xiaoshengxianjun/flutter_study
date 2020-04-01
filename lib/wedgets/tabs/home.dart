@@ -16,6 +16,30 @@ class HomePage extends StatelessWidget {
               })
         ],
       ),
+      drawer: Drawer(
+        child: MediaQuery.removePadding(
+            context: context,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Expanded(
+                  child: ListView(
+                    children: <Widget>[
+                      ListTile(
+                        leading: const Icon(Icons.add),
+                        title: const Text('菜单操作1'),
+                      ),
+                      ListTile(
+                        leading: const Icon(Icons.settings),
+                        title: const Text('菜单操作2'),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            )
+        ),
+      ),
       body: Container(
         child: Text("首页"),
       ),
