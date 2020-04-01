@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'tabs/home.dart';
+import 'tabs/tabBar.dart';
+import 'tabs/user.dart';
 
 class BottomNavBarPage extends StatefulWidget {
   @override
@@ -7,7 +10,13 @@ class BottomNavBarPage extends StatefulWidget {
 
 class _BottomNavBarPageState extends State<BottomNavBarPage> with SingleTickerProviderStateMixin{
 
-  int _selectIndex = 1; // bottomBabBar的激活项索引，默认是0
+  int _selectIndex = 0; // bottomBabBar的激活项索引，默认是0
+
+  List _pageList = [
+    new HomePage(),
+    new TabBarPage(),
+    new UserPage()
+  ]; // bottomNavigationBar对应的页面
 
   @override
   void initState() {
@@ -17,17 +26,6 @@ class _BottomNavBarPageState extends State<BottomNavBarPage> with SingleTickerPr
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("页面标题名称"),
-        centerTitle: true, // 设置标题居中，安卓设备上默认居左显示
-        actions: <Widget>[
-          IconButton(
-              icon: Icon(Icons.share),
-              onPressed: (){
-                  // 这里可以设置图标按钮的点击事件
-              })
-        ],
-      ),
       bottomNavigationBar: BottomNavigationBar(
           items: <BottomNavigationBarItem>[
             BottomNavigationBarItem(icon: Icon(Icons.home),title: Text("首页")),
@@ -86,6 +84,7 @@ class _BottomNavBarPageState extends State<BottomNavBarPage> with SingleTickerPr
             print("点击浮动按钮");
           }
       ),
+      body: _pageList[_selectIndex],
     );
   }
 }

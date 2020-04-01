@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class CategoryPage extends StatefulWidget {
+class TabBarPage extends StatefulWidget {
   @override
-  _CategoryPageState createState() => _CategoryPageState();
+  _TabBarPageState createState() => _TabBarPageState();
 }
 
-class _CategoryPageState extends State<CategoryPage> with SingleTickerProviderStateMixin {
+class _TabBarPageState extends State<TabBarPage> with SingleTickerProviderStateMixin {
   List tabs = ["新闻","历史","图片"]; // 定义tabbar列表
   TabController _tabController; // 需要定义一个Controller
 
@@ -30,6 +30,7 @@ class _CategoryPageState extends State<CategoryPage> with SingleTickerProviderSt
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        title: Text("TabBar页"),
         bottom: TabBar(
             indicatorSize: TabBarIndicatorSize.label, // 指示器即下划线宽度计算方式，两个选项tab（默认，跟tab等宽）label（跟文本等宽）
             indicatorWeight: 3, // 指示器的高度，默认为2
