@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 
-import '../views/myHome.dart';
-import '../views/user/login.dart';
-import '../views/user/regist.dart';
-import '../views/tabBar.dart';
+import '../wedgets/myHome.dart';
+import '../wedgets/user/login.dart';
+import '../wedgets/user/regist.dart';
+import '../wedgets/bottomNavBar.dart';
 
 final routes = {
-  '/': (context) => MyHomePage(),
+//  '/': (context) => MyHomePage(),
   '/login': (context, {arguments}) => LoginPage(arguments:arguments),
   '/regist': (context) => RegistPage(),
-  '/tabBar': (context) => TabBarPage(),
+  '/bottomNavBar': (context) => BottomNavBarPage(),
 };
 
 // 固定写法，命名路由可以传参写法

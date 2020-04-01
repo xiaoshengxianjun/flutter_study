@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      initialRoute: '/tabBar',
+      initialRoute: '/bottomNavBar',
       onGenerateRoute: onGenerateRoute,
     );
   }

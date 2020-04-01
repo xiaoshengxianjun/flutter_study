@@ -5,7 +5,7 @@ class RegistPage extends StatefulWidget {
   _RegistPageState createState() => _RegistPageState();
 }
 
-class _RegistPageState extends State<RegistPage> {
+class _RegistPageState extends State<RegistPage> with SingleTickerProviderStateMixin{
   // 定义一个mobile的controller来获取输入内容
   TextEditingController _mobileController = TextEditingController();
 
