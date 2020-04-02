@@ -69,7 +69,7 @@ class _MyHomePageState extends State<MyHomePage> {
             OutlineButton(
                 child: Text("切换卡"),
                 onPressed: () {
-                  Navigator.pushNamed(context, '/tabBar');
+                  Navigator.pushNamed(context, '/bottomNavBar');
                 })
           ],
         ),

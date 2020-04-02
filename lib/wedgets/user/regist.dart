@@ -105,21 +105,20 @@ class _RegistPageState extends State<RegistPage> with SingleTickerProviderStateM
                   ),
                   Expanded(
                       child: TextField(
-                        obscureText: true,
+                        obscureText: true, // 是否隐藏正在编辑的文本，如用于输入密码的场景等，文本内容会用“•”替换
                         focusNode: focusPassword, // 关联focusPassword
                         decoration: InputDecoration(
-                          hasFloatingPlaceholder: false,
+                          hasFloatingPlaceholder: false, // labelText是否浮动，默认true，修改为false则LabelText在聚焦时不会上浮且不显示
                           labelText: "请填写密码",
                           hintText: "请填写密码",
-                          enabledBorder: OutlineInputBorder(
+                          enabledBorder: OutlineInputBorder( // 输入框可用时显示的边框
                               borderRadius: BorderRadius.all(Radius.circular(10)), // 直接在TextField上设置圆角边框
                               borderSide: BorderSide(color: Colors.black12, width: 1)
                           ),
-                          focusedBorder: OutlineInputBorder(
+                          focusedBorder: OutlineInputBorder( // 聚焦时显示的边框
                               borderRadius: BorderRadius.all(Radius.circular(10)),
                               borderSide: BorderSide(color: Colors.lightBlueAccent, width: 1)
                           ),
-
                         ),
                         onChanged: (val){
                           // 输入内容发生变化时触发此方法，可获取到输入的内容
