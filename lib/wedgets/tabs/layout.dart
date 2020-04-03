@@ -71,6 +71,12 @@ class _LayoutPageState extends State<LayoutPage> with SingleTickerProviderStateM
                 ],
               ),
             ),
+            RaisedButton(
+                child: Text("路由"),
+                onPressed: (){
+                    Navigator.pushNamed(context, '/page1');
+                }
+            )
           ],
         ),
       ),
