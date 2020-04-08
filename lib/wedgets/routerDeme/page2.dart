@@ -1,14 +1,11 @@
 import 'package:flutter/material.dart';
 
-class PageTwo extends StatefulWidget {
-  @override
-  _PageTwoState createState() => _PageTwoState();
-}
-
-class _PageTwoState extends State<PageTwo> with SingleTickerProviderStateMixin{
+class PageTwo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    var args = ModalRoute.of(context).settings.arguments;
+    // 获取路由参数，返回字符串
+    var args=ModalRoute.of(context).settings.arguments;
+    print(args);
 
     return Scaffold(
       appBar: AppBar(
@@ -19,9 +16,8 @@ class _PageTwoState extends State<PageTwo> with SingleTickerProviderStateMixin{
           Text(args),
           RaisedButton(
               child: Text("跳转第三页"),
-              onPressed: () async {
-                args = await Navigator.pushNamed(context, '/page3');
-                print(args);
+              onPressed: (){
+                Navigator.pushNamed(context, '/page3');
               }
           )
         ],
@@ -29,4 +25,3 @@ class _PageTwoState extends State<PageTwo> with SingleTickerProviderStateMixin{
     );
   }
 }
-
