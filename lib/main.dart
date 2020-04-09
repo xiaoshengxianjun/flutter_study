@@ -23,8 +23,8 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       initialRoute: '/bottomNavBar',
-//      onGenerateRoute: onGenerateRoute,
       routes: routes,
+      onGenerateRoute: onGenerateRoute,
     );
   }
 }

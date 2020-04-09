@@ -100,7 +100,31 @@ class _LoginPageState extends State<LoginPage> {
                           ),
                         ),
                       ),
-                      onPressed: (){}
+                      onPressed: (){
+                        Navigator.of(context).pushNamed('/bottomNavBar');
+                      }
+                  ),
+                ),
+                SizedBox(width: 10.0,),
+                Expanded(
+                  child: RaisedButton(
+                      color: Colors.blue, // 按钮背景颜色
+                      highlightColor: Colors.blue[700], // 按钮按下时的背景颜色
+                      colorBrightness: Brightness.dark, // 按钮主题，默认是浅色主题，深色字，改成dark主题字体会变成浅色
+                      splashColor: Colors.grey, // 点击时，水波动画中水波的颜色
+                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30.0)), // 外形，这里设置成胶囊状
+                      child: Container( // 这里之所以用Container是为了给按钮设置高度
+                        height: 50.0,
+                        alignment: Alignment.center,
+                        child: Text('注册',
+                          style: TextStyle( // 不通过style设置字体大小，默认字号有些小
+                              fontSize: 20.0 // 修改按钮字体大小
+                          ),
+                        ),
+                      ),
+                      onPressed: (){
+                        Navigator.of(context).pushNamed('/regist');
+                      }
                   ),
                 )
               ],
